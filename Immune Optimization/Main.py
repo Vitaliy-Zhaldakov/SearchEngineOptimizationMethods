@@ -66,7 +66,7 @@ if __name__ == "__main__":
                 network = rastrigin(minValue, maxValue, size_Sb, nb, intensiveParam,iterations)
 
             time1 = time.time()
-            time = []
+            time_list = []
             solution = []
 
             # Генерация случайной популяции
@@ -89,7 +89,7 @@ if __name__ == "__main__":
                 result = [Sb[best_index], best_solution]
 
                 # Точки времени
-                time.append(time.time() - time1)
+                time_list.append(time.time() - time1)
                 # Точки решений
                 solution.append(result[1])
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
             # Построение графика эффективности
             fig, ax = plt.subplots()
-            ax.plot(x, y)
+            ax.plot(time_list, solution)
             plt.show()
 
             # Построение 3D графика
