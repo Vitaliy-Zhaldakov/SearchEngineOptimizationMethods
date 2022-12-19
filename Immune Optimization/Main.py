@@ -99,6 +99,9 @@ if __name__ == "__main__":
             # Построение графика эффективности
             fig, ax = plt.subplots()
             ax.plot(time_list, solution)
+            plt.title("График эффективности алгоритма")
+            plt.xlabel("Время")
+            plt.ylabel("Значение лучшего решения")
             plt.show()
 
             # Построение 3D графика
